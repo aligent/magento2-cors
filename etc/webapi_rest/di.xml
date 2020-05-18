@@ -14,7 +14,8 @@
         </arguments>
     </type>
     <type name="Magento\Webapi\Controller\Rest">
-        <plugin name="graycoreCorsPreflightHandlerRest" type="Graycore\Cors\Response\PreflightRequestHandler" />
+        <!-- Sort Order is a temporary workaround to address OPTIONS requests causing a fatal error in module-staging plugin -->
+        <plugin name="graycoreCorsPreflightHandlerRest" sortOrder="-1" type="Graycore\Cors\Plugin\Rest\PreflightRequestHandler" />
     </type>
     <type name="Magento\Framework\Webapi\Rest\Response">
         <plugin name="genericWebApiHeaderPlugin" type="Graycore\Cors\Response\HeaderManager"/>

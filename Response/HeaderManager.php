@@ -40,7 +40,7 @@ class HeaderManager
 
      /**
       * @param \Magento\Framework\App\Response\HttpInterface $response
-      * @return void
+      * @return \Magento\Framework\App\Response\HttpInterface
       */
     public function applyHeaders(\Magento\Framework\App\Response\HttpInterface $response)
     {
